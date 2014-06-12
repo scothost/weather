@@ -3,14 +3,16 @@
 class Help extends Controller{
 
 	function __construct() {
-		echo 'we are in help </br>';
+		parent::__construct;
+		
+	}
+
+	function index() {
+		$this->view->render("help/index");
 	}
 
 	public function other( $arg = false ) {
-		echo 'we are inside other</br>'
-		echo 'Optional: ' . $arg;
-
-
+		
 		require 'models/help.php';
 		$model = new Help_Model();
 	}
