@@ -9,7 +9,7 @@ class Help_Model extends Model{
 	}
 
 	function blah(){
-		
+		return 10 + 10;
 	}
 	
 }
