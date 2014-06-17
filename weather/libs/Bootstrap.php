@@ -8,7 +8,7 @@ class Bootstrap {
 		$url = rtrim($url, '/'); //trims the slashes at the end of an url
 		$url = explode( '/' , $url );
 		
-		print_r($url);
+		//print_r($url);
 
 		if ( empty($url[0]) ){// takes care of the situations in which index.php is not specified in the url
 			require 'controllers/index.php';
@@ -25,7 +25,8 @@ class Bootstrap {
 		}
 		
 		$controller = new $url[0];
-
+		$controller->loadModel($url[0]);
+		
 		//calling methods
 		if (isset($url[2])) {
 			if (method_exists($controller, $url[1])) {
@@ -45,6 +46,8 @@ class Bootstrap {
 			}
 		}
 	}
+	
+	
 	
 	function error() {
 		require 'controllers/error.php';
