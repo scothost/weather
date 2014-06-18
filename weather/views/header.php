@@ -6,6 +6,16 @@
 	<script type="text/javascript" 	src="<?php echo URL; ?>public/js/jQuery1.js" ></script>
 	<script type="text/javascript" 	src="<?php echo URL; ?>public/js/custom.js"></script>
 	<link rel="shortcut icon" href="<?php echo URL; ?>public/images/sunny-cloudy.png">
+	<?php
+	//engine to include a js file only for certain modules of the MVC
+	//otherwise the custom js could get really big really fast
+		if (isset($this->js))
+		{
+			foreach ($this->js as $js){
+				echo '<script type="text/javascript" src="'. URL.'views/'.$js.'"></script>';
+			}
+		}
+	?>
 </head>
 <body>
 

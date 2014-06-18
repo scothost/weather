@@ -50,3 +50,10 @@
 [18-Jun-2014 03:09:29 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wwwvighi/public_html/subdomain_weather/config/database.php:9) in /home/wwwvighi/public_html/subdomain_weather/controllers/dashboard.php on line 23
 [18-Jun-2014 03:09:38 Europe/Moscow] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/wwwvighi/public_html/subdomain_weather/config/database.php:9) in /home/wwwvighi/public_html/subdomain_weather/models/login_model.php on line 33
 [18-Jun-2014 12:03:06 Europe/Moscow] PHP Fatal error:  Class 'public' not found in /home/wwwvighi/public_html/subdomain_weather/libs/Bootstrap.php on line 27
+[18-Jun-2014 13:28:26 Europe/Moscow] PHP Fatal error:  Class 'dashboard_Model' not found in /home/wwwvighi/public_html/subdomain_weather/libs/Controller.php on line 19
+[18-Jun-2014 15:09:57 Europe/Moscow] PHP Fatal error:  Call to undefined method Model::construct() in /home/wwwvighi/public_html/subdomain_weather/models/dashboard_model.php on line 7
+[18-Jun-2014 15:09:57 Europe/Moscow] PHP Fatal error:  Class 'favicon.ico' not found in /home/wwwvighi/public_html/subdomain_weather/libs/Bootstrap.php on line 27
+[18-Jun-2014 17:35:06 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/wwwvighi/public_html/subdomain_weather/models/dashboard_model.php on line 18
+[18-Jun-2014 17:43:56 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/wwwvighi/public_html/subdomain_weather/models/dashboard_model.php on line 18
+[18-Jun-2014 18:00:12 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/wwwvighi/public_html/subdomain_weather/models/dashboard_model.php on line 18
+[18-Jun-2014 18:00:29 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/wwwvighi/public_html/subdomain_weather/models/dashboard_model.php on line 18
