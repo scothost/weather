@@ -5,28 +5,36 @@ class Login_Model extends Model{
 	function __construct() 
 	{
 		parent::__construct();
-		echo md5('ioto');
-		
 	}
 	
 	public function run()
-	{
-		$login 		= $_POST['login'];
-		$password 	= $_POST['password'];
-		
+	{	
 		//this->db->query("
 		//	SELECT id FROM users 
 		//	WHERE login = '$login' AND password = '$password'");
 		
 		$statement = $this->db->prepare("
 			SELECT id FROM users 
-			WHERE login = :login AND password = MD5(:password)");
+			WHERE username = :username AND password = MD5(:password)");
 		$statement->execute(array(
-			':login' => $login,
-			':password' => $password
+			':username' => $_POST['username'],
+			':password' => $_POST['password']
 			));
-			
-		$data = $sth->fetchAll();
-		print_r($data);
+		
+		
+		//$data = $statement->fetchAll();
+		//print_r($data);
+		
+		$count = $statement->rowCount();
+		if ($count > 0) {
+			//login
+			Session::init();
+			Session::set('loggedIn', true);
+			header('location: ../dashboard');
+		}else{
+			//show error
+			header('location: ../login');
+		}
+		
 	}
 }

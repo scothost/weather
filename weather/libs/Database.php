@@ -10,8 +10,7 @@ class Database extends PDO //need to have this enabled in the php.ini file.
 
 	public function __construct()
 	{
-		parent::__construct('mysql:host=localhost;dbname=wwwvighi_weather', 'wwwvighi_dev', '{9oUz?Dbr~5&');
-		echo '------------YEEEY-----------';
+		parent::__construct( DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
 	}
 
 }

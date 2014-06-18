@@ -1,20 +1,35 @@
 body {
-	background: silver;
+	background: linear-gradient(to right, silver , white, silver); /* Standard syntax */
 }
 
 #header {
 	padding: 20px;
 	background: gold;
+	margin: 5px 15%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 8px;
 }
 
 #content {
 	background: #fff;
 	padding: 20px;
+	margin: 5px 15%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 8px;
 }
 
 #footer {
 	padding: 20px;
 	background: green;
+	margin: 5px 15%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 8px;
 }
 
 
