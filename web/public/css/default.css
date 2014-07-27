@@ -4,7 +4,7 @@ body {
 
 #header {
 	padding: 20px;
-	background: gold;
+	background: lightblue;
 	margin: 5px 15%;
 	border-width: 2px;
 	border-style: solid;
@@ -24,7 +24,7 @@ body {
 
 #footer {
 	padding: 20px;
-	background: green;
+	background: lightblue;
 	margin: 5px 15%;
 	border-width: 2px;
 	border-style: solid;
