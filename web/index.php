@@ -1,5 +1,6 @@
 <?php
 
+
 require 'config.php';
 
 //spl_autoload_register - might want to check out this as well
