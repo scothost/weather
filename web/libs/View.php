@@ -8,10 +8,12 @@ class View {
 
 	public function render($name, $noInclude = false)
 	{
-		if ($noInclude == true) { //if it's true it does not include the header and footer and if it's false as the default value it includes them
+		//if it's true it does not include the header and footer and if it's false as the default value it includes them
+		if ($noInclude == true) {
 			require 'views/' . $name . '.php';
 		}
-		else{
+		else
+		{
 			require 'views/header.php';
 			require 'views/' . $name . '.php';
 			require 'views/footer.php';

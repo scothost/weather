@@ -2,7 +2,6 @@
 
 class Hash
 {
-    
 	/**
 	 *
 	 * @param string $algo The algorithm (md5, sha1, whirlpool, etc)

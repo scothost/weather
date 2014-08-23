@@ -1,0 +1,8 @@
+TO DO LIST:
+
+- implement message handling for the error controller
+	if i write a weird url the error controller works, but there is also an error which sais that the file is not included in /libs/
+- add constants to all paths in the system so that they can be changed at any time (models,controllers etc)
+- add else branch in controller.php to account for not finding the file
+- improove Hash.php
+- session.php research wtf does @session_start() mean... what's that @
