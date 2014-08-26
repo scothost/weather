@@ -9,16 +9,13 @@ class User_Model extends Model{
 	
 	public function userList()
 	{	
-	    return $this->db->select('SELECT id, username, role FROM user');
-// 		$sth = $this->db->prepare('SELECT id,role,username FROM user');
-// 		$sth->execute();
-// 		return $sth->fetchAll();
-
+	    return $this->db->select('SELECT userid, username, role FROM user');
 	}
 	
-	public function userSingleList($id)
+	public function userSingleList($userid)
 	{
-	    return $this->db->select('SELECT id,role,username,password FROM user WHERE id = :id', array(':id' => $id));
+	    return $this->db->select('SELECT userid,role,username,password FROM user WHERE userid = :userid', 
+	    	array(':userid' => $userid));
 // 	    $sth = $this->db->prepare('SELECT id,role,username,password FROM user WHERE id = :id');
 // 		$sth->execute(array(
 // 		    ':id' => $id
@@ -53,7 +50,7 @@ class User_Model extends Model{
  		    'role' => $data['role']
 	        );
 	    //$this->db->update('users', $postData , "'id' = {$data['id']}");
-	    $this->db->update('user', $postData , null);
+	    $this->db->update('user', $postData , " 'userid' = {$data['userid']} ");
 	    
 // 	    $sth = $this->db->prepare('UPDATE users
 // 	            SET `username` = :username, `password` = :password, `role` = :role
@@ -67,9 +64,9 @@ class User_Model extends Model{
 // 		    ));
 	}
 	
-	public function delete($id)
+	public function delete($userid)
 	{
-	   $result = $this->db->select('SELECT role FROM user WHERE id = :id',array(':id' => $id));
+	   $result = $this->db->select('SELECT role FROM user WHERE userid = :userid',array(':userid' => $userid));
 	   // $sth = $this->db->prepare('SELECT role FROM user WHERE id = :id');
 	   // $sth->execute(array(':id' => $id));
 	   // $data = $sth->fetch();
@@ -79,7 +76,7 @@ class User_Model extends Model{
 	    //print_r($data);
 	    //die();
 	    
-	    $this->db->delete('user', "id = ':id'");
+	    $this->db->delete('user', "userid = ':userid'");
 	   // $sth = $this->db->prepare('DELETE FROM user WHERE id = :id');
 	   // $sth->execute(array(':id' => $id));
 	}

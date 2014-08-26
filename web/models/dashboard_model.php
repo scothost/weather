@@ -34,7 +34,8 @@ class Dashboard_Model extends Model{
 	
 	function xhrDeleteListing()
 	{
-		$id = (int) $_POST['id']; //typecast to integer just to have a little bit of protection
+		//typecast to integer just to have a little bit of protection
+		$id = (int) $_POST['id']; 
 		echo $this->db->delete('data',"id = '$id'");
 		//$sth = $this->db->prepare('DELETE FROM data WHERE id = "' . $id . '"');
 		//$sth->execute();
