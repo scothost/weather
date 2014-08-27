@@ -9,6 +9,7 @@ class Note extends Controller{
 
 	public function index() 
 	{
+        $this->view->title = 'Notes';
 	    $this->view->noteList = $this->model->noteList();
 		$this->view->render('note/index');
 	}
@@ -25,8 +26,9 @@ class Note extends Controller{
     
     public function edit($noteid) 
     {
+        $this->view->title = 'Edit Note';
         $this->view->note = $this->model->noteSingleList($noteid);
-// print_r($this->view->note);
+        // print_r($this->view->note);
         if (empty($this->view->note)) {
             die('this is an invalid note');
         }

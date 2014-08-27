@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title>&lt;weather&gt;</title>
+	<title><?=(isset($this->title)) ? $this->title : 'Weather'; ?></title>
 	<link 	type="text/css" rel="stylesheet" 	href="<?php echo URL; ?>public/css/default.css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />

@@ -8,7 +8,7 @@ class Help_Model extends Model{
 	}
 
 	function blah(){
-	echo '10blah';
+		echo '10blah';
 		return 10 + 10;
 	}
 	

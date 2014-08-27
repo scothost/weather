@@ -11,6 +11,7 @@ function __autoload($class){
     require LIBS . $class . '.php';
 }
 
+// Loads the bootstrap!
 $bootstrap = new Bootstrap();
 
 // These are the default values, uncomment and modify if needed

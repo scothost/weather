@@ -6,3 +6,8 @@ TO DO LIST:
 - add else branch in controller.php to account for not finding the file
 - improove Hash.php
 - session.php research wtf does @session_start() mean... what's that @
+
+- create a custom header/footer loader! something like this
+$this->view->render('error/index', 'error/include/header');
+
+public function render($page, $header = 'header', $footer = 'footer');

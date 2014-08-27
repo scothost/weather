@@ -14,7 +14,9 @@ class Dashboard extends Controller{
 		$this->view->js = array('dashboard/js/default.js');
 	}
 
-	function index() {
+	function index() 
+	{
+		$this->view->title = 'Dashboard';
 		$this->view->render('dashboard/index');
 	}
 

@@ -6,14 +6,9 @@ class Help extends Controller{
 		parent::__construct();
 	}
 
-	function index() {
+	function index() 
+	{
+		$this->view->title = 'Help';
 		$this->view->render('help/index');
-	}
-
-	public function other( $arg = false ) {
-		
-		require 'models/help_model.php';
-		$model = new Help_Model();
-		$this->view->blah = $model->blah();
 	}
 }

@@ -9,6 +9,7 @@ class User extends Controller{
 
 	function index() 
 	{
+        $this->view->title = 'Users';
 	    $this->view->userList = $this->model->userList();
 		$this->view->render('user/index');
 	}
@@ -28,6 +29,7 @@ class User extends Controller{
     
     public function edit($userid) 
     {
+        $this->view->title = 'Edit User';
         $this->view->user = $this->model->userSingleList($userid);
         $this->view->render('user/edit');
     }
