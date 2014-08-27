@@ -8,10 +8,8 @@ class Login extends Controller{
 
 	function index() 
 	{
-	    echo Hash::create('md5','chronoss', MY_HASH_PASSWORD_KEY);
-		
+	    //echo Hash::create('md5','chronoss', MY_HASH_PASSWORD_KEY);
 		$this->view->render('login/index');
-
 	}
 	
 	

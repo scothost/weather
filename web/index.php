@@ -11,5 +11,13 @@ function __autoload($class){
     require LIBS . $class . '.php';
 }
 
-$app = new Bootstrap();
+$bootstrap = new Bootstrap();
+
+// These are the default values, uncomment and modify if needed
+// $bootstrap->setControllerPath('controllers');
+// $bootstrap->setModelPath('models');
+// $bootstrap->setErrorFile('error.php');
+// $bootstrap->setDefaultFile('index.php');
+
+$bootstrap->init();
 
